@@ -1,0 +1,49 @@
+.bg-action {
+  background-color: #FF5733;
+  color: white;
+}
+
+.bg-comedy {
+  background-color: #FAD02E;
+  color: white;
+}
+
+.bg-drama {
+  background-color: #5A9AD6;
+  color: white;
+}
+
+.bg-thriller {
+  background-color: #800080;
+  color: white;
+}
+
+.bg-science-fiction {
+  background-color: #2E86C1;
+  color: white;
+}
+
+.bg-adventure {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.bg-animation {
+  background-color: #FFC300;
+  color: black;
+}
+
+.bg-romance {
+  background-color: #FF1493;
+  color: white;
+}
+
+.bg-documentary {
+  background-color: #A9A9A9;
+  color: white;
+}
+
+.bg-superhero {
+  background-color: #FF4500;
+  color: white;
+}
