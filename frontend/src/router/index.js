@@ -10,12 +10,10 @@ const router = createRouter({
       name: 'Homeview',
       component: HomeView
     },
-
     {
       path: '/edit/:id',
       name:'EditCard',
-      component: EditCard
-    
+      component: EditCard 
     }
   ]
 })

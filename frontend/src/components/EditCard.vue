@@ -11,7 +11,6 @@
   try {
     const response = await FilmDataService.getAll();
     films.value = response.data;
-    
   } catch (error) {
     console.log(error);
   }
@@ -29,15 +28,14 @@ const saveChanges = async (film) => {
   } catch (error) {
     console.log('Error updating film:', error);
   }
-
 };
 const startEditing = (film) => {
   film.editing = true;
 };
   
-  onMounted(getFilms);
+onMounted(getFilms);
   
-  </script>
+</script>
 
 <template>
   <div>

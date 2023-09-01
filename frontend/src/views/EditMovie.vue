@@ -2,8 +2,6 @@
 import EditCard from '../components/EditCard.vue';
 </script>
 
-<template>
-    
-        
+<template>   
     <EditCard/>
 </template>
