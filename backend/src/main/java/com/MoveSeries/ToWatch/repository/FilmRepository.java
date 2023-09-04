@@ -1,8 +1,8 @@
-package com.example.demo.repository;
+package com.MoveSeries.ToWatch.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.models.Film;
+import com.MoveSeries.ToWatch.models.Film;
 
 public interface FilmRepository extends JpaRepository<Film, Long> {
 

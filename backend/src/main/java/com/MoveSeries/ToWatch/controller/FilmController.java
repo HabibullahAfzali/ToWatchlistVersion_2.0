@@ -1,8 +1,9 @@
-package com.example.demo.controller;
+package com.MoveSeries.ToWatch.controller;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.MoveSeries.ToWatch.services.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,12 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Film;
-import com.example.demo.services.FilmService;
+import com.MoveSeries.ToWatch.models.Film;
 
 @RestController
+@CrossOrigin("*")
+
 @RequestMapping("/films")
-@CrossOrigin(origins = "http://localhost:5173")
+
 
 public class FilmController {
 

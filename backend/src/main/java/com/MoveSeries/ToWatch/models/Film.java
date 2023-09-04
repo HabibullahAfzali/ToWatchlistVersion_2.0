@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.MoveSeries.ToWatch.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title", nullable = false, unique = true, length = 50)
+    @Column(nullable = false, unique = true, length = 50)
     private String title;
 
     @Column(name = "date", nullable = false, length = 50)

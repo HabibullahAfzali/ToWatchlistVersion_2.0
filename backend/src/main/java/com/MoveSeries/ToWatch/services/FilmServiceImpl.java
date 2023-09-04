@@ -1,14 +1,12 @@
-package com.example.demo.services;
-
+package com.MoveSeries.ToWatch.services;
 import java.util.List;
 import java.util.Optional;
 
+import com.MoveSeries.ToWatch.models.Film;
+import com.MoveSeries.ToWatch.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.example.demo.models.Film;
-import com.example.demo.repository.FilmRepository;
 
 @Service
 public class FilmServiceImpl implements FilmService {
@@ -53,7 +51,6 @@ public class FilmServiceImpl implements FilmService {
             film.setWhereToWatch(filmDetails.getWhereToWatch());
             return save(film);
         } else {
-
             return null;
         }
     }
