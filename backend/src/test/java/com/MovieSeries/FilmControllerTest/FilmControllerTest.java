@@ -37,6 +37,18 @@ private  FilmController filmController;
 				.standaloneSetup((filmController))
 				.build();
 	}
+	@Test
+	public void testSaveFilm() throws Exception {
+		Film film = new Film();
+		film.setId(1L);
+		when(filmService.save(any())).thenReturn(film);
+
+		mockMvc.perform(MockMvcRequestBuilders.post("/films")
+						.content("{}")
+						.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.id").value(1));
+	}
 
 	@Test
 	public void testGetFilmById() throws Exception {
