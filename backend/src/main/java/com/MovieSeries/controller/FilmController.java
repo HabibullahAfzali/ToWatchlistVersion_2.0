@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.MovieSeries.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Film;
-import com.example.demo.services.FilmService;
+import com.MovieSeries.models.Film;
+import com.MovieSeries.services.FilmService;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/films")
-@CrossOrigin(origins = "http://localhost:5173")
+
 
 public class FilmController {
 

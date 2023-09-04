@@ -1,9 +1,9 @@
-package com.example.demo.services;
+package com.MovieSeries.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.example.demo.models.Film;
+import com.MovieSeries.models.Film;
 
 public interface FilmService {
 
