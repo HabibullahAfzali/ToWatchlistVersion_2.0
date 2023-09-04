@@ -14,7 +14,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -38,7 +37,6 @@ private  FilmController filmController;
 				.standaloneSetup((filmController))
 				.build();
 	}
-
 
 	@Test
 	public void testGetFilmById() throws Exception {
