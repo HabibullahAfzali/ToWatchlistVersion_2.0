@@ -3,7 +3,7 @@ package com.MovieSeries.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.MovieSeries.models.Film;
+import com.MovieSeries.model.Film;
 
 public interface FilmService {
 
