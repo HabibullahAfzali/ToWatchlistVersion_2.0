@@ -3,7 +3,6 @@ import FilmDataService from '../services/FilmDataService';
 import {reactive } from 'vue';
 import {genres, whereToWatchOptions} from '../Options';
 
-
 const film = reactive({
   id: null,
   title: "",
@@ -36,7 +35,8 @@ function saveFilm() {
 
 <template>
   <form >
-    <div class="form-group">
+    <div class="main-container">
+    <div class="form-group ">
       <!-- <label for="title">Title:</label> -->
       <input type="text" class="form-control" id="title" placeholder="Title" v-model="film.title">
     </div>
@@ -65,23 +65,34 @@ function saveFilm() {
     <div class="d-flex justify-content-center mt-2">
       <button type="submit" class="btn btn-warning" @click="saveFilm"> Add movie </button>
     </div>
-
+  </div>
   </form>
 </template>
 
-<style scoped>
 
-input, select{
-  width: 65%;
+<style scoped>
+.main-container {
+  width: 50%;
   margin: auto;
-  text-align: center;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+
 }
 
-form{
+input,
+select {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1em;
-  margin-top: 1em;
+  margin: 2em;
+  
 }
 </style>
