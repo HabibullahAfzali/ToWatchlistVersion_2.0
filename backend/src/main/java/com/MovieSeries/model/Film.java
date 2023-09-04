@@ -1,4 +1,4 @@
-package com.MovieSeries.models;
+package com.MovieSeries.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,8 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Films")
 public class Film {
 
@@ -27,19 +32,7 @@ public class Film {
     @Column(name = "WhereToWatch", nullable = false)
     private String WhereToWatch;
 
-    public Film(Long id, String title, int date, String genre, String WhereToWatch) {
-        super();
-        this.id = id;
-        this.title = title;
-        this.date = date;
-        this.genre = genre;
-        this.WhereToWatch = WhereToWatch;
-
-    }
-
-    public Film() {
-
-    }
+    //Getter and Setter
 
     public Long getId() {
         return id;
