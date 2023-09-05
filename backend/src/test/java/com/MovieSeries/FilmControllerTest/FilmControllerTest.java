@@ -64,4 +64,18 @@ private  FilmController filmController;
 		System.out.println("Test passed: Film found by ID");
 	}
 
+		@Test
+	public void testFindAll() throws Exception {
+
+		Film film1 = new Film();
+		Film film2 = new Film();
+		film1.setId(1L);
+		film2.setId(2L);
+
+		when(filmService.findAll()).thenReturn(List.of(film1,film2));
+
+		mockMvc.perform(MockMvcRequestBuilders.get("/films"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.length()").value(2));
+	}
 }
