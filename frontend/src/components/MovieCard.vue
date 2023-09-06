@@ -5,7 +5,6 @@ import { useRouter } from 'vue-router';
 import { genreColors } from '../GenreColors';
 import '../assets/bg-colors.css';
 
-
 const router = useRouter();
 
 function navigateToEdit(id) {
@@ -69,11 +68,9 @@ onBeforeMount(getFilms);
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .card {
     width: 300px;
   }
-
   .card-header, .card-footer {
     background-color: rgb(59, 59, 59);
     color: white;

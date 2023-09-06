@@ -32,19 +32,18 @@ const saveChanges = async (film) => {
 const startEditing = (film) => {
   film.editing = true;
 };
-  
+
 onMounted(getFilms);
-  
 </script>
 
 <template>
-  <div>
-    <div class="d-flex justify-content-center p-1">
+  <div class="main-container">
+    <div class="justify-content-start p-1">
       <RouterLink to="/">
         <button type="button" class="btn btn-dark">Go Back</button>
       </RouterLink>
     </div>
-    <h2 class="d-flex justify-content-center">Edit Film</h2>
+    <h2>Edit Film</h2>
     <div v-for="film in films" :key="film.id"  class="card text-center w-80  m-3">
       <div class="card-header">{{ film.title }}</div>
       <div class="card-body">
@@ -84,10 +83,30 @@ onMounted(getFilms);
   
 
 <style scoped>
-    
+  .main-container {
+  top:2;
+  left: 12rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+h2{
+  text-align: center;
+  font-size: 3rem;
+  color: bisque;
+  text-shadow: 0 0 10px rgba(19, 16, 16, 0.99);
+}
+
   .card-header, .card-footer {
     background-color: rgb(59, 59, 59);
     color: white;
+    
   }
 
   .edit-form {
@@ -99,6 +118,7 @@ onMounted(getFilms);
 
   input, select {
     text-align: center;
+ 
   }
   
 

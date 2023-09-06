@@ -3,8 +3,10 @@ package com.MovieSeries.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.MovieSeries.models.Film;
+import com.MovieSeries.model.Film;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface FilmService {
 
     public List<Film> findAll();

@@ -3,12 +3,13 @@ package com.MovieSeries.services;
 import java.util.List;
 import java.util.Optional;
 
+import com.MovieSeries.ExceptionHandling.FilmNotFoundException;
 import com.MovieSeries.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.MovieSeries.models.Film;
+import com.MovieSeries.model.Film;
 
 @Service
 public class FilmServiceImpl implements FilmService {
@@ -54,7 +55,7 @@ public class FilmServiceImpl implements FilmService {
             return save(film);
         } else {
 
-            return null;
+            throw new FilmNotFoundException("Film with ID " + id + " not found");
         }
     }
 
