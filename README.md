@@ -1,6 +1,6 @@
 # ToWatchlistVersion_2.0
-#Movie-List-Web-Application
-Overview
+# Movie-List-Web-Application
+# Overview
 This project is a web application developed using Spring Boot, MySQL, and Vue 3, designed to help you manage and list your movie collection. It provides basic CRUD (Create, Read, Update, Delete) operations for your movies, including details such as the movie title, release date, genre, and where to watch it. The frontend is built using Vue 3 and styled with Bootstrap, while the backend is powered by Spring Boot. The project also includes unit tests using JUnit and Mockito for the backend and end-to-end tests using Vue Test Utils (Vuetify) for the frontend.
 
 
