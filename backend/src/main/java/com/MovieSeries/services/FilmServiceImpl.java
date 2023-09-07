@@ -41,7 +41,6 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-
     @Transactional
     public Film updateFilmById(Long id, Film filmDetails) {
         Optional<Film> optionalFilm = findById(id);
@@ -54,9 +53,7 @@ public class FilmServiceImpl implements FilmService {
             film.setWhereToWatch(filmDetails.getWhereToWatch());
             return save(film);
         } else {
-
             throw new FilmNotFoundException("Film with ID " + id + " not found");
         }
     }
-
 }
