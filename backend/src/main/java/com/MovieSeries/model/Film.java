@@ -10,7 +10,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Films")
@@ -32,7 +31,6 @@ public class Film {
     @Column(name = "WhereToWatch", nullable = false)
     private String WhereToWatch;
 
-    //Getter and Setter
 
     public Long getId() {
         return id;
@@ -40,9 +38,7 @@ public class Film {
 
     public void setId(Long id) {
         this.id = id;
-
     }
-
     public String getTitle() {
         return title;
     }

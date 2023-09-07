@@ -64,18 +64,12 @@ public class FilmServiceImplTest {
 
 	@Test
 	public void testUpdateFilmById() {
-//		when(filmRepository.existsById(1L)).thenReturn(true);
-
 		when(filmRepository.findById(1L)).thenReturn(Optional.empty());
 		Film existingFilm = new Film();
 		existingFilm.setId(1L);
 		when(filmRepository.save(existingFilm)).thenReturn(existingFilm);
 
 		assertThrows(FilmNotFoundException.class,()->filmService.updateFilmById(1L,new Film()));
-
-//		Film updatedFilm = filmService.updateFilmById(1L, existingFilm);
-//		assertNotNull(updatedFilm);
-//		assertEquals(1L, updatedFilm.getId());
 	}
 
 
